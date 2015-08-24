@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		031D676F1B8A1C9600879BAB /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 031D676E1B8A1C9600879BAB /* main.c */; };
+		031D679C1B8AF5E400879BAB /* rating.c in Sources */ = {isa = PBXBuildFile; fileRef = 031D67751B8A1D8300879BAB /* rating.c */; };
+		031D679D1B8AF61500879BAB /* rating.h in Headers */ = {isa = PBXBuildFile; fileRef = 031D67761B8A1D8300879BAB /* rating.h */; };
+		031D679E1B8AF67900879BAB /* libpasser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 031D67981B8AF5D800879BAB /* libpasser.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +28,21 @@
 /* Begin PBXFileReference section */
 		031D676B1B8A1C9600879BAB /* passer-rating */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "passer-rating"; sourceTree = BUILT_PRODUCTS_DIR; };
 		031D676E1B8A1C9600879BAB /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		031D67751B8A1D8300879BAB /* rating.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rating.c; sourceTree = "<group>"; };
+		031D67761B8A1D8300879BAB /* rating.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rating.h; sourceTree = "<group>"; };
+		031D67981B8AF5D800879BAB /* libpasser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libpasser.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		031D67681B8A1C9600879BAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				031D679E1B8AF67900879BAB /* libpasser.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		031D67951B8AF5D800879BAB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -50,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				031D676B1B8A1C9600879BAB /* passer-rating */,
+				031D67981B8AF5D800879BAB /* libpasser.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,11 +73,24 @@
 			isa = PBXGroup;
 			children = (
 				031D676E1B8A1C9600879BAB /* main.c */,
+				031D67751B8A1D8300879BAB /* rating.c */,
+				031D67761B8A1D8300879BAB /* rating.h */,
 			);
 			path = "passer-rating";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		031D67961B8AF5D800879BAB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				031D679D1B8AF61500879BAB /* rating.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		031D676A1B8A1C9600879BAB /* passer-rating */ = {
@@ -82,6 +110,23 @@
 			productReference = 031D676B1B8A1C9600879BAB /* passer-rating */;
 			productType = "com.apple.product-type.tool";
 		};
+		031D67971B8AF5D800879BAB /* passer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 031D67991B8AF5D800879BAB /* Build configuration list for PBXNativeTarget "passer" */;
+			buildPhases = (
+				031D67941B8AF5D800879BAB /* Sources */,
+				031D67951B8AF5D800879BAB /* Frameworks */,
+				031D67961B8AF5D800879BAB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = passer;
+			productName = passer;
+			productReference = 031D67981B8AF5D800879BAB /* libpasser.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -92,6 +137,9 @@
 				ORGANIZATIONNAME = "Hyeongseok Kang";
 				TargetAttributes = {
 					031D676A1B8A1C9600879BAB = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					031D67971B8AF5D800879BAB = {
 						CreatedOnToolsVersion = 6.1;
 					};
 				};
@@ -109,6 +157,7 @@
 			projectRoot = "";
 			targets = (
 				031D676A1B8A1C9600879BAB /* passer-rating */,
+				031D67971B8AF5D800879BAB /* passer */,
 			);
 		};
 /* End PBXProject section */
@@ -119,6 +168,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				031D676F1B8A1C9600879BAB /* main.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		031D67941B8AF5D800879BAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				031D679C1B8AF5E400879BAB /* rating.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +259,7 @@
 		031D67731B8A1C9600879BAB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				New_Setting = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -209,6 +267,27 @@
 		031D67741B8A1C9600879BAB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				New_Setting = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		031D679A1B8AF5D800879BAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		031D679B1B8AF5D800879BAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -230,6 +309,15 @@
 			buildConfigurations = (
 				031D67731B8A1C9600879BAB /* Debug */,
 				031D67741B8A1C9600879BAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		031D67991B8AF5D800879BAB /* Build configuration list for PBXNativeTarget "passer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				031D679A1B8AF5D800879BAB /* Debug */,
+				031D679B1B8AF5D800879BAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
